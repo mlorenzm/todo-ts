@@ -1,7 +1,6 @@
+const App = () => {
+  const x = "g";
+  return <h1 className="rgrgr">Hello, TS</h1>;
+};
 
-
-function App() {
-  
-}
-
-export default App
+export default App;
