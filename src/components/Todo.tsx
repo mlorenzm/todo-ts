@@ -13,7 +13,7 @@ const Todo: React.FC<TodoObject> = (item: TodoObject) => {
   return (
     <div className="flex justify-between items-center">
       {finished ? (
-        <li className="max-w-xs break-words line-through text-gray-400">
+        <li className="max-w-xs break-words line-through text-neutral-content">
           {item.name}
         </li>
       ) : (

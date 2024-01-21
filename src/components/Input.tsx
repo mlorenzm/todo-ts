@@ -7,7 +7,7 @@ export default function Input() {
       <div className="flex gap-6">
         <input
           type="text"
-          placeholder="Type here"
+          placeholder="Type (heh) here"
           className="input input-bordered input-primary w-full max-w-xs"
         />
         <button className="btn btn-primary text-lg">
