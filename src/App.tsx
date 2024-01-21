@@ -7,7 +7,7 @@ const App = () => {
       name: "going for a walk",
     },
     {
-      name: "making this app mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm",
+      name: "making this app ",
       important: true,
     },
   ];
