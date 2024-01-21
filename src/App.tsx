@@ -22,3 +22,6 @@ const App = () => {
 };
 
 export default App;
+
+// TODO
+// - set a placeholder when there are no todo items

@@ -19,9 +19,4 @@ const TodoContainer: React.FC<TodoProps> = ({ todoArray }) => {
   );
 };
 
-// TODO:
-// ! componentize Todo with own state
-// - make disappear typeError on checked input
-// - update array to delete finished todos
-
 export default TodoContainer;

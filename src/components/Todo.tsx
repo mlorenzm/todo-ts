@@ -8,7 +8,6 @@ const Todo: React.FC<TodoObject> = (item: TodoObject) => {
   const [finished, setFinished] = useState(false);
   const handleChange = () => {
     finished ? setFinished(false) : setFinished(true);
-    console.log(finished);
   };
   return (
     <>
