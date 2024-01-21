@@ -7,12 +7,12 @@ const App = () => {
       name: "going for a walk",
     },
     {
-      name: "making this app",
+      name: "making this app mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm",
       important: true,
     },
   ];
   return (
-    <main className="grid place-content-center">
+    <main className="grid place-content-center mt-6 gap-6">
       <Input />
       <TodoContainer todoArray={todos} />
     </main>

@@ -8,11 +8,16 @@ interface TodoProps {
 
 const TodoContainer: React.FC<TodoProps> = ({ todoArray }) => {
   return (
-    <div>
-      {todoArray.map((item) => (
-        <li>{item.name}</li>
+    <ul className="text-xl flex flex-col gap-2">
+      {todoArray.map((item, i) => (
+        <div key={i} className="flex justify-between items-center">
+          <li className="max-w-xs break-words">{item.name}</li>
+          {item.important && (
+            <div className="badge badge-primary self-start">Important</div>
+          )}
+        </div>
       ))}
-    </div>
+    </ul>
   );
 };
 
