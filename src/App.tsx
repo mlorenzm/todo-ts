@@ -1,4 +1,5 @@
 import Input from "./components/Input";
+import Title from "./components/Title";
 import TodoContainer from "./components/TodoContainer";
 
 const App = () => {
@@ -13,6 +14,7 @@ const App = () => {
   ];
   return (
     <main className="grid place-content-center mt-6 gap-6">
+      <Title />
       <Input />
       <TodoContainer todoArray={todos} />
     </main>
