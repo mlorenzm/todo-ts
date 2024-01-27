@@ -1,6 +1,10 @@
 import { useState } from "react";
+import TodoType from "../TodoType";
 
-const Input: React.FC = ({ changeTodos }) => {
+type TodoProps = {
+  onAddTodo: (newTodo: TodoType) => void;
+};
+const Input: React.FC<TodoProps> = ({ onAddTodo }) => {
   const [isImportant, setIsImportant] = useState(false);
   const handleImportanceChange = () => {
     setIsImportant(!isImportant);
@@ -8,10 +12,8 @@ const Input: React.FC = ({ changeTodos }) => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const todoName = e.currentTarget.todo.value;
-    console.log(todoName);
-    console.log(isImportant);
+    onAddTodo({ name: todoName, important: isImportant });
     e.currentTarget.reset();
-    changeTodos({ name: todoName, important: isImportant });
   };
 
   return (
@@ -47,5 +49,3 @@ const Input: React.FC = ({ changeTodos }) => {
   );
 };
 export default Input;
-// TODO:
-// - add todos from input; callback fn, typing might be detrimental here

@@ -1,10 +1,7 @@
 import { useState } from "react";
-interface TodoObject {
-  name: string;
-  important?: boolean;
-}
+import TodoType from "../TodoType";
 
-const Todo: React.FC<TodoObject> = (item: TodoObject) => {
+const Todo = (item: TodoType) => {
   const [finished, setFinished] = useState(false);
   const handleChange = () => {
     finished ? setFinished(false) : setFinished(true);

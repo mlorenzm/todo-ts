@@ -1,31 +1,20 @@
 import Input from "./components/Input";
 import Title from "./components/Title";
 import TodoContainer from "./components/TodoContainer";
-import { useState, useCallback } from "react";
+import { useState } from "react";
+import TodoType from "./TodoType";
 const App = () => {
-  const [todos, setTodos] = useState([
-    {
-      name: "going for a walk",
-      important: false,
-    },
-    {
-      name: "making this app ",
-      important: true,
-    },
-  ]);
-  const handleChangeTodo = useCallback((e) => {
-    setTodos(e);
-  }, []);
+  const [todos, setTodos] = useState<TodoType[]>([]);
+  const addTodo = (newTodo: TodoType): void => {
+    setTodos((prevTodos) => [...prevTodos, newTodo]);
+  };
   return (
     <main className="grid place-content-center mt-6 gap-6">
       <Title />
-      <Input onChange={handleChangeTodo} />
-      <TodoContainer todoArray={todos} />
+      <Input onAddTodo={addTodo} />
+      <TodoContainer todos={todos} />
     </main>
   );
 };
 
 export default App;
-
-// TODO
-// - set a placeholder when there are no todo items
