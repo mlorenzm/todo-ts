@@ -1,8 +1,4 @@
 import { useState } from "react";
-interface Input {
-  todo: string;
-  important: boolean;
-}
 
 export default function Input() {
   const [isImportant, setIsImportant] = useState(false);
@@ -11,8 +7,10 @@ export default function Input() {
   };
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log(e.target.todo.value);
+    const todoName = e.currentTarget.todo.value;
+    console.log(todoName);
     console.log(isImportant);
+    e.currentTarget.reset();
   };
 
   return (
@@ -22,6 +20,7 @@ export default function Input() {
       </div>
       <div className="flex gap-6 items-center">
         <input
+          required
           type="text"
           name="todo"
           placeholder="Type (heh) here"
