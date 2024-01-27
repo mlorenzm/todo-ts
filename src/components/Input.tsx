@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function Input() {
+const Input: React.FC = ({ changeTodos }) => {
   const [isImportant, setIsImportant] = useState(false);
   const handleImportanceChange = () => {
     setIsImportant(!isImportant);
@@ -11,6 +11,7 @@ export default function Input() {
     console.log(todoName);
     console.log(isImportant);
     e.currentTarget.reset();
+    changeTodos({ name: todoName, important: isImportant });
   };
 
   return (
@@ -44,7 +45,7 @@ export default function Input() {
       </div>
     </form>
   );
-}
-
+};
+export default Input;
 // TODO:
 // - add todos from input; callback fn, typing might be detrimental here
