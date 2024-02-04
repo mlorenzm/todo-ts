@@ -1,19 +1,29 @@
 {
   "notes": [
     {
-      "id": 1,
-      "content": "HTML is easy",
+      "id": "1",
+      "name": "HTML is easy",
       "important": true
     },
     {
-      "id": 2,
-      "content": "Browser can execute only JavaScript",
+      "id": "2",
+      "name": "Browser can execute only JavaScript",
       "important": false
     },
     {
-      "id": 3,
-      "content": "GET and POST are the most important methods of HTTP protocol",
+      "id": "3",
+      "name": "GET and POST are the most important methods of HTTP protocol",
       "important": true
+    },
+    {
+      "id": "a7e0",
+      "name": "Modify db.json",
+      "important": true
+    },
+    {
+      "id": "43f1",
+      "name": "stop running server",
+      "important": false
     }
   ]
 }

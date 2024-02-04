@@ -1,6 +1,5 @@
 import { useState } from "react";
 import TodoType from "../TodoType";
-
 const Todo = (item: TodoType) => {
   const [finished, setFinished] = useState(false);
   const handleChange = () => {

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import TodoType from "../TodoType";
+import axios from "axios";
 
 type TodoProps = {
   onAddTodo: (newTodo: TodoType) => void;
@@ -12,7 +13,10 @@ const Input: React.FC<TodoProps> = ({ onAddTodo }) => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const todoName = e.currentTarget.todo.value;
-    onAddTodo({ name: todoName, important: isImportant });
+    const todoObject = { name: todoName, important: isImportant };
+    axios.post("http://localhost:3001/notes", todoObject).then((response) => {
+      onAddTodo(response.data);
+    });
     e.currentTarget.reset();
   };
 
